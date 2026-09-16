@@ -28,8 +28,8 @@ export async function generateMetadata({
   return {
     title: category ? getCategoryName(category.slug, locale) : slug,
     description: category
-      ? `${getCategoryName(category.slug, locale)} news | JagoShongbad`
-      : `${slug} news | JagoShongbad`,
+      ? `${getCategoryName(category.slug, locale)} news | Daily Rudro Khobor`
+      : `${slug} news | Daily Rudro Khobor`,
   };
 }
 

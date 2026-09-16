@@ -38,7 +38,7 @@ export const adSources: AdSource[] = [
     slug: "grameen-phone-5g",
     type: "banner",
     placements: ["header", "below-hero"],
-    image: "/images/news-5.svg",
+    image: "https://picsum.photos/seed/ad-telecom/1200/400",
     link: { bn: "https://example.com/grameen-phone", en: "https://example.com/grameen-phone" },
     title: {
       bn: "গ্রামীণফোন ৫জি এখন সারা দেশে",
@@ -53,7 +53,7 @@ export const adSources: AdSource[] = [
     slug: "banglalink-mega-sale",
     type: "banner",
     placements: ["in-content"],
-    image: "/images/news-2.svg",
+    image: "https://picsum.photos/seed/ad-sale/1200/400",
     link: { bn: "https://example.com/banglalink", en: "https://example.com/banglalink" },
     title: {
       bn: "বাংলালিংক মেগা সেল: ৫০% ডিসকাউন্ট",
@@ -110,7 +110,7 @@ export const adSources: AdSource[] = [
     slug: "tech-startup-spotlight",
     type: "sponsored",
     placements: ["in-feed"],
-    image: "/images/news-7.svg",
+    image: "https://picsum.photos/seed/ad-startup/1200/400",
     link: { bn: "https://example.com/tech-startup", en: "https://example.com/tech-startup" },
     title: {
       bn: "বাংলাদেশের স্টার্টআপগুলোতে যে ট্রেন্ড বদলে দিচ্ছে বাজার",
@@ -126,11 +126,11 @@ export const adSources: AdSource[] = [
     slug: "podcast-launch-popup",
     type: "banner",
     placements: ["popup"],
-    image: "/images/news-6.svg",
+    image: "https://picsum.photos/seed/ad-podcast/1200/400",
     link: { bn: "https://example.com/podcast", en: "https://example.com/podcast" },
     title: {
-      bn: "জাগোসংবাদ পডকাস্ট: প্রতিদিন সকালে ১০ মিনিটের শীর্ষ সংবাদ",
-      en: "JagoShongbad Podcast: Top news in 10 minutes every morning",
+      bn: "দৈনিক রুদ্রখবর পডকাস্ট: প্রতিদিন সকালে ১০ মিনিটের শীর্ষ সংবাদ",
+      en: "Daily Rudro Khobor Podcast: Top news in 10 minutes every morning",
     },
     description: {
       bn: "চাকরি, অর্থনীতি ও দেশের খবর — এক কাপ চায়ের সঙ্গে শুনুন আজকের সারসংক্ষেপ।",

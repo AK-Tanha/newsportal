@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Dictionary } from "@/lib/dictionaries";
 import type { Locale } from "@/lib/locales";
@@ -35,14 +36,15 @@ export default function Header({
       {/* Masthead */}
       <div className="border-b border-gray-200 bg-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-5">
-          <Link href={`/${locale}`} className="flex shrink-0 flex-col">
-            <span className="text-3xl font-extrabold leading-none tracking-tight text-ink-900">
-              <span className="text-brand">{dict.brandHi} </span>
-              {dict.brandLo}
-            </span>
-            <span className="mt-1 text-[11px] font-medium text-gray-500">
-              {dict.tagline}
-            </span>
+          <Link href={`/${locale}`} className="flex shrink-0 items-center">
+            <Image
+              src="/logo.png"
+              alt={`${dict.brandHi} ${dict.brandLo}`}
+              width={180}
+              height={48}
+              className="h-24 w-auto object-contain"
+              priority
+            />
           </Link>
 
           <div className="hidden lg:block">

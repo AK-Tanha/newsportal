@@ -10,9 +10,7 @@ export function proxy(request: NextRequest) {
   );
   if (hasLocale) return NextResponse.next();
 
-  const acceptLanguage = request.headers.get("accept-language") ?? "";
-  const prefersEnglish = /^\s*en(?:-[a-z]+)?(\s*,|$)/i.test(acceptLanguage);
-  const locale = prefersEnglish ? "en" : defaultLocale;
+  const locale = defaultLocale;
 
   const url = request.nextUrl.clone();
   url.pathname = pathname === "/" ? `/${locale}` : `/${locale}${pathname}`;

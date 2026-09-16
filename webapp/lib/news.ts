@@ -76,7 +76,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "budget-deficit-reduction-plan",
     category: "economy",
-    image: "/images/news-1.svg",
+    image: "https://picsum.photos/seed/economy-budget/1200/800",
     views: "১২,৪৫০",
     featured: true,
     breaking: false,
@@ -116,7 +116,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "padma-bridge-industrial-zone",
     category: "economy",
-    image: "/images/news-2.svg",
+    image: "https://picsum.photos/seed/economy-bridge/1200/800",
     views: "৯,৮৩০",
     featured: true,
     breaking: false,
@@ -152,7 +152,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "stock-market-record-high",
     category: "economy",
-    image: "/images/news-3.svg",
+    image: "https://picsum.photos/seed/economy-stock/1200/800",
     views: "১৫,২০০",
     featured: false,
     breaking: true,
@@ -188,7 +188,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "national-parliament-new-session",
     category: "politics",
-    image: "/images/news-4.svg",
+    image: "https://picsum.photos/seed/politics-parliament/1200/800",
     views: "৮,৭৬০",
     featured: false,
     breaking: false,
@@ -224,7 +224,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "upazila-election-schedule",
     category: "politics",
-    image: "/images/news-5.svg",
+    image: "https://picsum.photos/seed/politics-election/1200/800",
     views: "১১,৩২০",
     featured: false,
     breaking: true,
@@ -260,7 +260,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "parliament-leader-meeting-separatists",
     category: "politics",
-    image: "/images/news-6.svg",
+    image: "https://picsum.photos/seed/politics-dialogue/1200/800",
     views: "৭,৫৪০",
     featured: false,
     breaking: false,
@@ -296,7 +296,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "international-climate-summit-agreement",
     category: "international",
-    image: "/images/news-7.svg",
+    image: "https://picsum.photos/seed/intl-climate/1200/800",
     views: "২০,০৯০",
     featured: true,
     breaking: false,
@@ -332,7 +332,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "us-china-trade-deal",
     category: "international",
-    image: "/images/news-2.svg",
+    image: "https://picsum.photos/seed/intl-trade/1200/800",
     views: "১৩,৪০০",
     featured: false,
     breaking: false,
@@ -368,7 +368,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "australia-recorded-heatwave",
     category: "international",
-    image: "/images/news-3.svg",
+    image: "https://picsum.photos/seed/intl-heatwave/1200/800",
     views: "৬,৭৮০",
     featured: false,
     breaking: false,
@@ -404,7 +404,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "bangladesh-test-series-india",
     category: "sports",
-    image: "/images/news-4.svg",
+    image: "https://picsum.photos/seed/sports-cricket/1200/800",
     views: "৩৫,৪৩০",
     featured: true,
     breaking: true,
@@ -440,7 +440,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "football-premier-league-result",
     category: "sports",
-    image: "/images/news-5.svg",
+    image: "https://picsum.photos/seed/sports-football/1200/800",
     views: "২২,১০০",
     featured: false,
     breaking: false,
@@ -476,7 +476,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "bangladesh-world-cup-preparation",
     category: "sports",
-    image: "/images/news-6.svg",
+    image: "https://picsum.photos/seed/sports-training/1200/800",
     views: "18,০৫০",
     featured: false,
     breaking: false,
@@ -512,7 +512,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "film-festival-award-national",
     category: "entertainment",
-    image: "/images/news-7.svg",
+    image: "https://picsum.photos/seed/entertainment-film/1200/800",
     views: "১৬,৭৮০",
     featured: true,
     breaking: false,
@@ -548,7 +548,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "new-music-video-release",
     category: "entertainment",
-    image: "/images/news-1.svg",
+    image: "https://picsum.photos/seed/entertainment-music/1200/800",
     views: "২৮,৪৪০",
     featured: false,
     breaking: false,
@@ -584,7 +584,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "annual-halud-program-live",
     category: "entertainment",
-    image: "/images/news-9.svg",
+    image: "https://picsum.photos/seed/entertainment-live/1200/800",
     views: "১০,৯২০",
     featured: false,
     breaking: false,
@@ -620,7 +620,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "smartphone-launch-bangladesh",
     category: "technology",
-    image: "/images/news-3.svg",
+    image: "https://picsum.photos/seed/tech-mobile/1200/800",
     views: "১৪,৫৬০",
     featured: false,
     breaking: false,
@@ -656,7 +656,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "ai-translation-government-services",
     category: "technology",
-    image: "/images/news-2.svg",
+    image: "https://picsum.photos/seed/tech-ai/1200/800",
     views: "১২,৩০০",
     featured: false,
     breaking: false,
@@ -692,7 +692,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "rohingya-refugee-aid-situation",
     category: "national",
-    image: "/images/news-6.svg",
+    image: "https://picsum.photos/seed/national-refugee/1200/800",
     views: "৯,১২০",
     featured: false,
     breaking: false,
@@ -728,7 +728,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "health-free-treatment-camp",
     category: "lifestyle",
-    image: "/images/news-5.svg",
+    image: "https://picsum.photos/seed/lifestyle-health/1200/800",
     views: "৫,৯৮০",
     featured: false,
     breaking: false,
@@ -764,7 +764,7 @@ export const articleSources: ArticleSource[] = [
   {
     slug: "river-cruise-tourism-expand",
     category: "lifestyle",
-    image: "/images/news-7.svg",
+    image: "https://picsum.photos/seed/lifestyle-river/1200/800",
     views: "৮,৪১০",
     featured: false,
     breaking: false,

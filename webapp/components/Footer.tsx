@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { categories } from "@/lib/news";
 import type { Dictionary } from "@/lib/dictionaries";
@@ -33,10 +34,16 @@ export default function Footer({
     <footer className="mt-12 bg-ink-900 text-gray-400">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div className="sm:col-span-2">
-          <p className="text-2xl font-extrabold text-white">
-            <span className="text-brand">{dict.brandHi} </span>
-            {dict.brandLo}
-          </p>
+          {/* Wrapper container that acts as the cropping window */}
+          <div className="w-45 h-24 overflow-hidden flex justify-center items-center bg-white">
+            <Image
+              src="/logo.png"
+              alt={`${dict.brandHi} ${dict.brandLo}`}
+              width={180}
+              height={48}
+              className="h-24 w-auto object-none max-w-none"
+            />
+          </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed">
             {dict.footerAbout}
           </p>

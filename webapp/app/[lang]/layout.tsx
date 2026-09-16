@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Hind_Siliguri } from "next/font/google";
+import { Geist, Geist_Mono, Tiro_Bangla } from "next/font/google";
 import { lang } from "next/root-params";
 import { getDictionaryStatic } from "@/lib/dictionaries";
 import { isLocale, defaultLocale } from "@/lib/locales";
@@ -21,20 +21,38 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const hindSiliguri = Hind_Siliguri({
-  variable: "--font-hind-siliguri",
+const tiroBangla = Tiro_Bangla({
+  variable: "--font-tiro-bangla",
   subsets: ["bengali"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jagoshongbad.example.com"),
+  metadataBase: new URL("https://rudrokhobor.example.com"),
   title: {
-    default: "জাগোসংবাদ | বস্তুনিষ্ঠ সংবাদের অনলাইন ঠিকানা",
-    template: "%s | জাগোসংবাদ",
+    default: "দৈনিক রুদ্রখবর | সত্য তথ্য ও বলিষ্ঠ কন্ঠে চলবে অবিরাম",
+    template: "%s | দৈনিক রুদ্রখবর",
   },
   description:
-    "দেশ ও বিদেশের সর্বশেষ খবর, জাতীয়, অর্থনীতি, আন্তর্জাতিক, খেলাধুলা, বিনোদন ও লাইফস্টাইল—সব এক ঠিকানায়।",
+    "সত্য তথ্য ও বলিষ্ঠ কন্ঠে চলবে অবিরাম — দেশ ও বিদেশের সর্বশেষ খবর, জাতীয়, অর্থনীতি, আন্তর্জাতিক, খেলাধুলা, বিনোদন ও লাইফস্টাইল।",
+  icons: {
+    icon: "/icon.png",
+  },
+  openGraph: {
+    title: "দৈনিক রুদ্রখবর | সত্য তথ্য ও বলিষ্ঠ কন্ঠে চলবে অবিরাম",
+    description:
+      "সত্য তথ্য ও বলিষ্ঠ কন্ঠে চলবে অবিরাম — দেশ ও বিদেশের সর্বশেষ খবর, জাতীয়, অর্থনীতি, আন্তর্জাতিক, খেলাধুলা, বিনোদন ও লাইফস্টাইল।",
+    siteName: "দৈনিক রুদ্রখবর",
+    images: [
+      {
+        url: "/logo.png",
+        width: 512,
+        height: 512,
+      },
+    ],
+    locale: "bn_BD",
+    type: "website",
+  },
 };
 
 export function generateStaticParams() {
@@ -54,7 +72,7 @@ export default async function RootLayout({ children }: LayoutProps<"/[lang]">) {
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} ${hindSiliguri.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${tiroBangla.variable} h-full antialiased`}
     >
       <body
         className="min-h-full flex flex-col bg-gray-100"
