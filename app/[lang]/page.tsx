@@ -61,7 +61,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
 
       {/* Main content + sidebar */}
       <section className="mt-8 grid gap-8 lg:grid-cols-3">
-        {/* Main column */}
+        {/* Main column  */}
         <div className="space-y-10 lg:col-span-2">
           <section>
             <SectionHeading
