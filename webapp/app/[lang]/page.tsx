@@ -9,7 +9,9 @@ import {
   getCategoryName,
 } from "@/lib/news";
 import { getDictionaryStatic } from "@/lib/dictionaries";
+import { getAdsByPlacement } from "@/lib/ads";
 import BreakingTicker from "@/components/BreakingTicker";
+import { AdBanner, AdText } from "@/components/ads";
 import {
   HeroStory,
   InlineStory,
@@ -42,6 +44,10 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
   const rail = featured.slice(1, 5);
   const latest = getArticles(locale).slice(2, 10);
 
+  const belowHeroAds = getAdsByPlacement("below-hero", locale);
+  const inFeedAds = getAdsByPlacement("in-feed", locale);
+  const sidebarAds = getAdsByPlacement("sidebar", locale);
+
   return (
     <div className="mx-auto max-w-6xl px-4">
       <BreakingTicker locale={locale} />
@@ -59,6 +65,13 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
         </aside>
       </section>
 
+      {/* Below hero ad */}
+      {belowHeroAds[0] && (
+        <section className="mt-6">
+          <AdBanner ad={belowHeroAds[0]} dict={dict} />
+        </section>
+      )}
+
       {/* Main content + sidebar */}
       <section className="mt-8 grid gap-8 lg:grid-cols-3">
         {/* Main column  */}
@@ -74,6 +87,8 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
               ))}
             </div>
           </section>
+
+          {inFeedAds[0] && <AdText ad={inFeedAds[0]} dict={dict} />}
 
           {sectionSlugs.map((slug) => (
             <section key={slug}>
@@ -110,6 +125,8 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
                 ))}
             </div>
           </div>
+
+          {sidebarAds[0] && <AdText ad={sidebarAds[0]} dict={dict} />}
 
           <div className="rounded border border-gray-200 bg-white p-4">
             <h2 className="mb-3 text-base font-bold text-ink-800">

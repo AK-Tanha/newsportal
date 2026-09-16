@@ -10,7 +10,9 @@ import {
   getCategory,
 } from "@/lib/news";
 import { getDictionaryStatic } from "@/lib/dictionaries";
+import { getAdsByPlacement } from "@/lib/ads";
 import { CategoryTag, RankedStory } from "@/components/news";
+import { AdBanner, AdText } from "@/components/ads";
 
 type Route = "/[lang]/news/[slug]";
 
@@ -40,6 +42,10 @@ export default async function NewsPage({ params }: PageProps<Route>) {
 
   const dict = getDictionaryStatic(locale);
   const category = getCategory(article.category);
+
+  const inContentAds = getAdsByPlacement("in-content", locale);
+  const inContentAd = inContentAds[0];
+  const sidebarAds = getAdsByPlacement("sidebar", locale);
 
   const related = getArticles(locale)
     .filter((a) => a.category === article.category && a.slug !== article.slug)
@@ -107,9 +113,14 @@ export default async function NewsPage({ params }: PageProps<Route>) {
 
           <div className="mt-6 space-y-5">
             {article.content.map((paragraph, index) => (
-              <p key={index} className="text-[17px] leading-relaxed text-ink-800">
-                {paragraph}
-              </p>
+              <div key={index}>
+                <p className="text-[17px] leading-relaxed text-ink-800">
+                  {paragraph}
+                </p>
+                {inContentAd && index === Math.floor(article.content.length / 2) && (
+                  <AdBanner ad={inContentAd} dict={dict} className="my-8" />
+                )}
+              </div>
             ))}
           </div>
         </div>
@@ -151,6 +162,8 @@ export default async function NewsPage({ params }: PageProps<Route>) {
               ))}
             </div>
           </div>
+
+          {sidebarAds[0] && <AdText ad={sidebarAds[0]} dict={dict} />}
         </aside>
       </div>
     </article>

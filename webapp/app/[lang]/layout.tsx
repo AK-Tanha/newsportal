@@ -7,6 +7,8 @@ import type { Locale } from "@/lib/locales";
 import { locales } from "@/lib/locales";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PopupAd from "@/components/PopupAd";
+import { adSources, localizeAd } from "@/lib/ads";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -44,15 +46,24 @@ export default async function RootLayout({ children }: LayoutProps<"/[lang]">) {
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const dict = getDictionaryStatic(locale);
 
+  const popupSource = adSources.find((ad) =>
+    ad.placements.includes("popup"),
+  );
+  const popupAd = popupSource ? localizeAd(popupSource, locale) : null;
+
   return (
     <html
       lang={locale}
       className={`${geistSans.variable} ${geistMono.variable} ${hindSiliguri.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-gray-100">
+      <body
+        className="min-h-full flex flex-col bg-gray-100"
+        suppressHydrationWarning
+      >
         <Header locale={locale} dict={dict} />
         <main className="flex-1">{children}</main>
         <Footer locale={locale} dict={dict} />
+        {popupAd && <PopupAd ad={popupAd} dict={dict} />}
       </body>
     </html>
   );

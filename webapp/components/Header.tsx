@@ -1,8 +1,11 @@
 import Link from "next/link";
 import type { Dictionary } from "@/lib/dictionaries";
 import type { Locale } from "@/lib/locales";
+import { localizeAd } from "@/lib/ads";
+import { adSources } from "@/lib/ads";
 import NavLinks from "./NavLinks";
 import LocaleSwitcher from "./LocaleSwitcher";
+import { AdBanner } from "./ads";
 
 export default function Header({
   locale,
@@ -41,6 +44,21 @@ export default function Header({
               {dict.tagline}
             </span>
           </Link>
+
+          <div className="hidden lg:block">
+            {(() => {
+              const headerAd = adSources.find((ad) =>
+                ad.placements.includes("header"),
+              );
+              return headerAd ? (
+                <AdBanner
+                  ad={localizeAd(headerAd, locale)}
+                  dict={dict}
+                  className="flex-1"
+                />
+              ) : null;
+            })()}
+          </div>
 
           <div className="hidden items-center gap-2 md:flex">
             <label className="flex w-72 items-center gap-2 border border-gray-300 px-3 py-2">

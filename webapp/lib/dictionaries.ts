@@ -36,6 +36,9 @@ export interface Dictionary {
   privacy: string;
   copyright: string;
   editor: string;
+  advertisement: string;
+  sponsored: string;
+  closeAd: string;
 }
 
 const bn: Dictionary = {
@@ -76,6 +79,9 @@ const bn: Dictionary = {
   privacy: "গোপনীয়তা নীতি",
   copyright: "© ২০২৬ সর্বস্বত্ব সংরক্ষিত | জাগোসংবাদ ডট কম",
   editor: "সম্পাদক: রায়হান হোসেন",
+  advertisement: "বিজ্ঞাপন",
+  sponsored: "স্পনসর্ড",
+  closeAd: "বন্ধ করুন",
 }
 
 const en: Dictionary = {
@@ -116,6 +122,9 @@ const en: Dictionary = {
   privacy: "Privacy Policy",
   copyright: "© 2026 All Rights Reserved | JagoShongbad.com",
   editor: "Editor: Rayhan Hossain",
+  advertisement: "Advertisement",
+  sponsored: "Sponsored",
+  closeAd: "Close",
 };
 
 const dictionaries: Record<Locale, Dictionary> = { bn, en };

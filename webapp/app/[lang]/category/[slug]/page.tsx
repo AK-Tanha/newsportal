@@ -9,7 +9,9 @@ import {
   getCategoryName,
 } from "@/lib/news";
 import { getDictionaryStatic } from "@/lib/dictionaries";
+import { getAdsByPlacement } from "@/lib/ads";
 import { HeroStory, SectionHeading, VerticalCard } from "@/components/news";
+import { AdText, SponsoredAdCard } from "@/components/ads";
 
 type Route = "/[lang]/category/[slug]";
 
@@ -43,6 +45,10 @@ export default async function CategoryPage({ params }: PageProps<Route>) {
   const items = getArticlesByCategory(category.slug, locale);
   const [lead, ...rest] = items;
 
+  const inFeedAds = getAdsByPlacement("in-feed", locale);
+  const sponsoredAd = inFeedAds.find((ad) => ad.type === "sponsored");
+  const sidebarAds = getAdsByPlacement("sidebar", locale);
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-6">
       <SectionHeading
@@ -59,8 +65,13 @@ export default async function CategoryPage({ params }: PageProps<Route>) {
 
       <div className="grid gap-6 lg:grid-cols-3">
         <div className="grid gap-5 sm:grid-cols-2 lg:col-span-2">
-          {rest.map((article) => (
-            <VerticalCard key={article.slug} article={article} />
+          {rest.map((article, index) => (
+            <div key={article.slug}>
+              <VerticalCard article={article} />
+              {sponsoredAd && index === 2 && (
+                <SponsoredAdCard ad={sponsoredAd} dict={dict} className="mt-5" />
+              )}
+            </div>
           ))}
         </div>
 
@@ -83,6 +94,7 @@ export default async function CategoryPage({ params }: PageProps<Route>) {
                 </li>
               ))}
           </ul>
+          {sidebarAds[0] && <AdText ad={sidebarAds[0]} dict={dict} className="mt-6" />}
         </aside>
       </div>
     </div>
