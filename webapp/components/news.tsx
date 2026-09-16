@@ -76,20 +76,20 @@ export async function HeroStory({ article }: { article: Article }) {
           className="object-cover transition-transform duration-300 group-hover:scale-105"
           priority
         />
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
         <CategoryTag
           name={article.categoryName}
           color={getCategory(article.category)?.color ?? "#e2231a"}
-          className="absolute left-3 top-3"
+          className="absolute left-3 top-3 z-10"
         />
-      </div>
-      <div className="relative -mt-10 px-5 pb-5">
-        <h2 className="text-2xl font-bold leading-snug text-white drop-shadow-sm transition-colors group-hover:text-brand">
-          {article.title}
-        </h2>
-        <p className="mt-2 hidden text-sm leading-relaxed text-gray-200 sm:block">
-          {article.summary}
-        </p>
+        <div className="absolute inset-x-0 bottom-0 z-10 px-5 pb-5">
+          <h2 className="text-2xl font-bold leading-snug text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.8)] transition-colors group-hover:text-brand">
+            {article.title}
+          </h2>
+          <p className="mt-2 hidden text-sm leading-relaxed text-gray-200 [text-shadow:0_1px_3px_rgba(0,0,0,0.7)] sm:block">
+            {article.summary}
+          </p>
+        </div>
       </div>
     </Link>
   );
