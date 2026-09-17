@@ -4,7 +4,7 @@ import { isLocale, defaultLocale, type Locale } from "@/lib/locales";
 import { getDictionaryStatic } from "@/lib/dictionaries";
 
 export default async function NotFound() {
-  const current = await lang();
+  const current = (await lang()) ?? defaultLocale;
   const locale: Locale = isLocale(current) ? current : defaultLocale;
   const dict = getDictionaryStatic(locale);
 

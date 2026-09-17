@@ -8,7 +8,9 @@ export function proxy(request: NextRequest) {
   const hasLocale = locales.some(
     (loc) => pathname === `/${loc}` || pathname.startsWith(`/${loc}/`),
   );
-  if (hasLocale) return NextResponse.next();
+  const isAdminPath =
+    pathname === "/admin" || pathname.startsWith("/admin/");
+  if (hasLocale || isAdminPath) return NextResponse.next();
 
   const locale = defaultLocale;
 

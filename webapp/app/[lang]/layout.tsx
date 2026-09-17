@@ -60,7 +60,7 @@ export function generateStaticParams() {
 }
 
 export default async function RootLayout({ children }: LayoutProps<"/[lang]">) {
-  const rawLocale = await lang();
+  const rawLocale = (await lang()) ?? defaultLocale;
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const dict = getDictionaryStatic(locale);
 

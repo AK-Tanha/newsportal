@@ -71,6 +71,26 @@ export default function NavLinks({ locale }: { locale: Locale }) {
         );
       })}
 
+      <Link
+        href={`/${locale}/videos`}
+        className={`${base} ${
+          pathname === `/${locale}/videos` ? "text-brand" : "text-ink-800"
+        }`}
+        onMouseEnter={() => setOpenCategory(null)}
+      >
+        {dict.video}
+      </Link>
+
+      <Link
+        href={`/${locale}/live`}
+        className={`${base} ${
+          pathname === `/${locale}/live` ? "text-brand" : "text-ink-800"
+        }`}
+        onMouseEnter={() => setOpenCategory(null)}
+      >
+        {dict.live}
+      </Link>
+
       {/* Megamenu panel */}
       {open && openCategory && (
         <div

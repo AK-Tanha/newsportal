@@ -15,6 +15,16 @@ export interface Dictionary {
   latestNews: string;
   mostRead: string;
   relatedNews: string;
+  video: string;
+  featuredVideos: string;
+  relatedVideos: string;
+  moreVideos: string;
+  live: string;
+  liveNow: string;
+  offTheAir: string;
+  noStreamTitle: string;
+  noStreamDesc: string;
+  viewers: string;
   categories: string;
   readers: string;
   newsletterTitle: string;
@@ -39,6 +49,11 @@ export interface Dictionary {
   advertisement: string;
   sponsored: string;
   closeAd: string;
+  followUs: string;
+  facebook: string;
+  twitter: string;
+  instagram: string;
+  youtube: string;
 }
 
 const bn: Dictionary = {
@@ -56,6 +71,17 @@ const bn: Dictionary = {
   latestNews: "সর্বশেষ সংবাদ",
   mostRead: "সর্বাধিক পঠিত",
   relatedNews: "সম্পর্কিত খবর",
+  video: "ভিডিও",
+  featuredVideos: "প্রচ্ছদ ভিডিও",
+  relatedVideos: "সম্পর্কিত ভিডিও",
+  moreVideos: "আরও ভিডিও",
+  live: "লাইভ",
+  liveNow: "সরাসরি সম্প্রচার চলছে",
+  offTheAir: "সম্প্রচার বন্ধ",
+  noStreamTitle: "কোনো লাইভ স্ট্রিম নেই",
+  noStreamDesc:
+    "পরবর্তী সম্প্রচার শুরু হলে এটি এখানে দেখা যাবে। এর মধ্যে, সর্বশেষ সংবাদ দেখে নিন।",
+  viewers: "দর্শক",
   categories: "বিভাগসমূহ",
   readers: "পাঠক",
   newsletterTitle: "নিউজলেটার পেতে সাবস্ক্রাইব করুন",
@@ -82,6 +108,11 @@ const bn: Dictionary = {
   advertisement: "বিজ্ঞাপন",
   sponsored: "স্পনসর্ড",
   closeAd: "বন্ধ করুন",
+  followUs: "আমাদের অনুসরণ করুন",
+  facebook: "ফেসবুক",
+  twitter: "টুইটার",
+  instagram: "ইনস্টাগ্রাম",
+  youtube: "ইউটিউব",
 }
 
 const en: Dictionary = {
@@ -99,6 +130,17 @@ const en: Dictionary = {
   latestNews: "Latest News",
   mostRead: "Most Read",
   relatedNews: "Related News",
+  video: "Video",
+  featuredVideos: "Featured Video",
+  relatedVideos: "Related Videos",
+  moreVideos: "More Videos",
+  live: "Live",
+  liveNow: "On air now",
+  offTheAir: "Off the air",
+  noStreamTitle: "No live stream configured",
+  noStreamDesc:
+    "The live stream will appear here once the next broadcast begins. In the meantime, catch up on the latest news.",
+  viewers: "viewers",
   categories: "Categories",
   readers: "readers",
   newsletterTitle: "Subscribe to our newsletter",
@@ -125,6 +167,11 @@ const en: Dictionary = {
   advertisement: "Advertisement",
   sponsored: "Sponsored",
   closeAd: "Close",
+  followUs: "Follow Us",
+  facebook: "Facebook",
+  twitter: "Twitter",
+  instagram: "Instagram",
+  youtube: "YouTube",
 };
 
 const dictionaries: Record<Locale, Dictionary> = { bn, en };
