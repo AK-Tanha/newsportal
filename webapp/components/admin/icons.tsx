@@ -150,10 +150,50 @@ export function CheckIcon({ className = "" }: IconProps) {
   );
 }
 
+export function ChevronDownIcon({ className = "" }: IconProps) {
+  return (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+      <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+    </svg>
+  );
+}
+
+export function UploadIcon({ className = "" }: IconProps) {
+  return (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+      <path d="M9 16h6v-6h4l-7-7-7 7h4v6zm-4 2h14v2H5v-2z" />
+    </svg>
+  );
+}
+
+export function LinkIcon({ className = "" }: IconProps) {
+  return (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z" />
+    </svg>
+  );
+}
+
 export function PlusIcon({ className = "" }: IconProps) {
   return (
     <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden>
       <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+    </svg>
+  );
+}
+
+export function PencilIcon({ className = "" }: IconProps) {
+  return (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+      <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+    </svg>
+  );
+}
+
+export function TrashIcon({ className = "" }: IconProps) {
+  return (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+      <path d="M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
     </svg>
   );
 }
