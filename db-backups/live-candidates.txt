@@ -1,0 +1,3 @@
+== candidate host:port shapes found in .env (password NEVER shown) ==
+
+== host uniqueness (masked digest per distinct host) ==

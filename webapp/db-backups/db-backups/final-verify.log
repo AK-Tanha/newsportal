@@ -1,0 +1,19 @@
+== discriminant (read-only): must say newsportal_db ==
+current_database=newsportal_db current_user=admin server=PostgreSQL 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0
+== migrations (must be exactly the 2) ==
+1. InitialSchema20260919000000
+2. AddAuthSessions20260921000000
+== final counts ==
+users=1
+categories=8
+tags=21
+media=23
+articles=25
+article_contents=50
+article_tags=46
+videos=11
+live_streams=2
+advertisements=7
+advertisement_placements=10
+site_settings=1
+sessions=0

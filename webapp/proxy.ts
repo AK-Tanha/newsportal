@@ -10,7 +10,8 @@ export function proxy(request: NextRequest) {
   );
   const isAdminPath =
     pathname === "/admin" || pathname.startsWith("/admin/");
-  if (hasLocale || isAdminPath) return NextResponse.next();
+  const isApiPath = pathname === "/api" || pathname.startsWith("/api/");
+  if (hasLocale || isAdminPath || isApiPath) return NextResponse.next();
 
   const locale = defaultLocale;
 

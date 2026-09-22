@@ -4,7 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { adminAppInfo, adminNavItems, adminUser } from "@/lib/admin";
 import { defaultLocale } from "@/lib/locales";
-import { ExternalLinkIcon, MenuIcon, SearchIcon } from "./icons";
+import {
+  ArticleIcon,
+  ExternalLinkIcon,
+  MenuIcon,
+  SearchIcon,
+} from "./icons";
 
 export default function AdminHeader({ onMenuClick }: { onMenuClick: () => void }) {
   const pathname = usePathname();
@@ -18,7 +23,7 @@ export default function AdminHeader({ onMenuClick }: { onMenuClick: () => void }
 
   return (
     <header className="sticky top-0 z-20 border-b border-gray-200/80 bg-white/90 backdrop-blur">
-      <div className="flex h-16 items-center gap-3 px-4 sm:px-6 md:px-8">
+      <div className="flex h-14 items-center gap-3 px-4 sm:px-6 md:h-16 md:px-8">
         <button
           type="button"
           onClick={onMenuClick}
@@ -28,7 +33,21 @@ export default function AdminHeader({ onMenuClick }: { onMenuClick: () => void }
           <MenuIcon className="h-5 w-5" />
         </button>
 
-        <div className="min-w-0 flex-1">
+        <div className="flex min-w-0 flex-1 items-center gap-2.5 sm:hidden">
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand text-white shadow-sm">
+            <ArticleIcon className="h-4 w-4" />
+          </span>
+          <div className="min-w-0">
+            <p className="truncate text-sm font-extrabold leading-tight tracking-tight text-ink-900">
+              {adminAppInfo.brandName}
+            </p>
+            <p className="truncate text-[11px] font-medium uppercase tracking-wider text-gray-400">
+              {adminAppInfo.panelLabel}
+            </p>
+          </div>
+        </div>
+
+        <div className="hidden min-w-0 flex-1 sm:block">
           <p className="flex items-center gap-1.5 text-xs font-medium text-gray-400">
             <span>{adminAppInfo.panelLabel}</span>
             <span aria-hidden className="text-gray-300">/</span>
@@ -58,8 +77,8 @@ export default function AdminHeader({ onMenuClick }: { onMenuClick: () => void }
           {adminAppInfo.viewSiteLabel}
         </Link>
 
-        <div className="flex items-center gap-3 border-l border-gray-200 pl-3">
-          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-brand text-sm font-bold text-white shadow-sm">
+        <div className="flex items-center gap-2.5 border-l border-gray-200 pl-2.5 sm:gap-3 sm:pl-3">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-brand text-xs font-bold text-white shadow-sm sm:h-9 sm:w-9 sm:text-sm">
             {adminUser.initials}
           </div>
           <div className="hidden sm:block">

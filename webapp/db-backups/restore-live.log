@@ -1,0 +1,62 @@
+===== pre: confirm schema present + empty (read-only) =====
+advertisement_placements|t
+advertisements|t
+article_contents|t
+article_tags|t
+articles|t
+categories|t
+live_streams|t
+media|t
+migrations|t
+sessions|t
+site_settings|t
+tags|t
+typeorm_metadata|t
+users|t
+videos|t
+===== restore parent tables =====
+pg_restore: error: could not open input file "/Users/rayhanhossin/workstations/newsportal/webapp/db-backups/local-20260921-223222.dump": No such file or directory
+rc_table_users=1
+pg_restore: error: could not open input file "/Users/rayhanhossin/workstations/newsportal/webapp/db-backups/local-20260921-223222.dump": No such file or directory
+rc_table_categories=1
+pg_restore: error: could not open input file "/Users/rayhanhossin/workstations/newsportal/webapp/db-backups/local-20260921-223222.dump": No such file or directory
+rc_table_tags=1
+pg_restore: error: could not open input file "/Users/rayhanhossin/workstations/newsportal/webapp/db-backups/local-20260921-223222.dump": No such file or directory
+rc_table_media=1
+pg_restore: error: could not open input file "/Users/rayhanhossin/workstations/newsportal/webapp/db-backups/local-20260921-223222.dump": No such file or directory
+rc_table_site_settings=1
+===== restore dependent tables =====
+pg_restore: error: could not open input file "/Users/rayhanhossin/workstations/newsportal/webapp/db-backups/local-20260921-223222.dump": No such file or directory
+rc_table_articles=1
+pg_restore: error: could not open input file "/Users/rayhanhossin/workstations/newsportal/webapp/db-backups/local-20260921-223222.dump": No such file or directory
+rc_table_article_contents=1
+pg_restore: error: could not open input file "/Users/rayhanhossin/workstations/newsportal/webapp/db-backups/local-20260921-223222.dump": No such file or directory
+rc_table_article_tags=1
+pg_restore: error: could not open input file "/Users/rayhanhossin/workstations/newsportal/webapp/db-backups/local-20260921-223222.dump": No such file or directory
+rc_table_videos=1
+pg_restore: error: could not open input file "/Users/rayhanhossin/workstations/newsportal/webapp/db-backups/local-20260921-223222.dump": No such file or directory
+rc_table_live_streams=1
+pg_restore: error: could not open input file "/Users/rayhanhossin/workstations/newsportal/webapp/db-backups/local-20260921-223222.dump": No such file or directory
+rc_table_advertisements=1
+pg_restore: error: could not open input file "/Users/rayhanhossin/workstations/newsportal/webapp/db-backups/local-20260921-223222.dump": No such file or directory
+rc_table_advertisement_placements=1
+pg_restore: error: could not open input file "/Users/rayhanhossin/workstations/newsportal/webapp/db-backups/local-20260921-223222.dump": No such file or directory
+rc_table_sessions=1
+===== fix sequences (advance identity past max) =====
+ERROR:  column "id" does not exist
+LINE 7: ...e('article_contents','id'), greatest(coalesce(max(id),1),1),...
+                                                             ^
+===== final counts (must equal local) =====
+users=0
+categories=0
+tags=0
+media=0
+articles=0
+article_contents=0
+article_tags=0
+videos=0
+live_streams=0
+advertisements=0
+advertisement_placements=0
+site_settings=0
+sessions=0

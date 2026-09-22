@@ -1,0 +1,17 @@
+mask=
+hostport=
+host=
+port=
+=== 1 tcp ===
+nc: port range not valid
+TCP_CLOSED
+=== 2 version ===
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL: 
+=== 3 identity ===
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+=== 4 public tables ===
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+=== 5 migrations ===
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+=== 6 counts ===
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist

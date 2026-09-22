@@ -1,0 +1,15 @@
+local_mask=
+live_host=
+--- 1) live TCP ---
+nc: port range not valid
+live_CLOSED
+--- 2) live PG version ---
+psql: error: connection to server
+--- 3) live whoami ---
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+--- 4) live tables ---
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+--- 5) live migrations ---
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+--- 6) counts ---
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist

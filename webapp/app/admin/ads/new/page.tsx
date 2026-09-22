@@ -1,6 +1,5 @@
 import PageHeading from "@/components/admin/PageHeading";
 import AdvertisementForm from "@/components/admin/ads/AdvertisementForm";
-import { getCmsAdSeeds } from "@/lib/admin-ads";
 
 export default function AdminAdNewPage() {
   return (
@@ -10,7 +9,7 @@ export default function AdminAdNewPage() {
         subtitle="Create an advertisement"
         breadcrumb={["Admin", "Advertisements", "New"]}
       />
-      <AdvertisementForm seeds={getCmsAdSeeds()} />
+      <AdvertisementForm />
     </div>
   );
 }

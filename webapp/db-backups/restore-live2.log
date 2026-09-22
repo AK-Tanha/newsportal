@@ -1,0 +1,35 @@
+===== 0 pre: live still empty (read-only) =====
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+===== 1 parent tables =====
+pg_restore: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+rc_users=1
+pg_restore: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+rc_categories=1
+pg_restore: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+rc_tags=1
+pg_restore: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+rc_media=1
+pg_restore: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+rc_site_settings=1
+===== 2 dependent tables =====
+pg_restore: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+rc_articles=1
+pg_restore: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+rc_article_contents=1
+pg_restore: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+rc_article_tags=1
+pg_restore: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+rc_videos=1
+pg_restore: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+rc_live_streams=1
+pg_restore: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+rc_advertisements=1
+pg_restore: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+rc_advertisement_placements=1
+pg_restore: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+rc_sessions=1
+===== 3 advance identity sequences past restored max =====
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+===== 4 final counts (must equal local ground truth) =====
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist

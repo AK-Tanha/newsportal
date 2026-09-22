@@ -1,0 +1,37 @@
+===== 0 pre live empty (read-only) =====
+users=0
+articles=0
+sessions=0
+===== 1 parent tables (FK-safe first) =====
+rc_users=0
+rc_categories=0
+rc_tags=0
+rc_media=0
+rc_site_settings=0
+===== 2 dependent tables =====
+rc_articles=0
+rc_article_contents=0
+rc_article_tags=0
+rc_videos=0
+rc_live_streams=0
+rc_advertisements=0
+rc_advertisement_placements=0
+rc_sessions=0
+===== 3 advance identity sequences past restored max =====
+ERROR:  column "id" does not exist
+LINE 7: ...ce('article_contents','id'), coalesce((SELECT max(id) FROM a...
+                                                             ^
+===== 4 final counts (must equal local ground truth) =====
+users=1
+categories=8
+tags=21
+media=23
+articles=25
+article_contents=50
+article_tags=46
+videos=11
+live_streams=2
+advertisements=7
+advertisement_placements=10
+site_settings=1
+sessions=0

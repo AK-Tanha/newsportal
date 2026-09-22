@@ -1,0 +1,18 @@
+mask=postgresql://admin:REDACTED@62.169.18.134:5432/newsportal_db
+orig_hostport=62.169.18.134:5432
+=== 1 TCP ===
+Connection to 62.169.18.134 port 5432 [tcp/postgresql] succeeded!
+OPEN 62.169.18.134:5432
+=== 2 psql version ===
+PostgreSQL 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
+=== 3 identity ===
+admin|newsportal_db
+=== 4 tables ===
+=== 5 migrations ===
+ERROR:  relation "migrations" does not exist
+LINE 1: SELECT id||'.'||name FROM migrations ORDER BY id;
+                                  ^
+=== 6 counts ===
+ERROR:  relation "users" does not exist
+LINE 2:  SELECT 'users='||count(*) FROM users UNION ALL
+                                        ^

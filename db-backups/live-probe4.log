@@ -1,0 +1,12 @@
+live_mask=
+== live TCP ==
+nc: port range not valid
+:_CLOSED
+== live version ==
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+== live tables ==
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+== live migrations ==
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+== live counts ==
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist

@@ -59,18 +59,18 @@ export function StatCard({
   hint?: string;
 }) {
   return (
-    <div className="rounded-xl border border-gray-200/80 bg-white p-4 shadow-sm transition-shadow hover:shadow-md">
-      <div className="flex items-center justify-between gap-3">
+    <div className="rounded-xl border border-gray-200/80 bg-white p-3.5 shadow-sm transition-shadow hover:shadow-md sm:p-4">
+      <div className="flex items-center justify-between gap-2.5 sm:gap-3">
         <div className="min-w-0">
-          <p className="text-2xl font-bold leading-tight tracking-tight text-ink-900">
+          <p className="text-xl font-bold leading-tight tracking-tight text-ink-900 sm:text-2xl">
             {value}
           </p>
-          <p className="mt-0.5 truncate text-xs font-semibold uppercase tracking-wide text-gray-500">
+          <p className="mt-0.5 truncate text-[11px] font-semibold uppercase tracking-wide text-gray-500 sm:text-xs">
             {label}
           </p>
         </div>
         <span
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-sm"
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-sm sm:h-10 sm:w-10"
           style={{ backgroundColor: `${color}1A`, color }}
         >
           {icon}

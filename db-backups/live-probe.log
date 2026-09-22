@@ -1,0 +1,14 @@
+## TCP reachability: live host ##
+nc: port range not valid
+TCP CLOSED (:)
+## live PG version ##
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does 
+not exist
+## live connection identity ##
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+## live public tables (names) ##
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+## live migrations table ##
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+## live row counts ##
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist

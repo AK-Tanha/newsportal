@@ -1,0 +1,13 @@
+=== live DB read-only connect test ===
+admin|newsportal_db|PostgreSQL 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, 64-bit
+psql_live_exit=0
+=== live schema object counts ===
+ERROR:  relation "migrations" does not exist
+LINE 5:     SELECT 'migration_rows='||count(*) FROM migrations;
+                                                    ^
+=== live existing tables (if any) ===
+=== live user data (admin row) count ===
+ERROR:  relation "users" does not exist
+LINE 1: SELECT count(*) FROM users;
+                             ^
+done

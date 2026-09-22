@@ -1,0 +1,14 @@
+live_shape=
+=== TCP reachability (live host :5432) ===
+Connection to  port 5432 [tcp/postgresql] succeeded!
+PORT_OPEN
+=== PG version (live) ===
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+=== current_user/db (live) ===
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+=== public tables (live) ===
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+=== migrations (live) ===
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+=== row counts (live) ===
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist

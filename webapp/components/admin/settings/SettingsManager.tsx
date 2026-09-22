@@ -352,11 +352,19 @@ export default function SettingsManager({
           </div>
         </Section>
 
-        <Card className="flex flex-wrap items-center justify-end gap-2">
-          <Button variant="outline" onClick={() => setConfirmingReset(true)}>
+        <Card className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:justify-end sm:gap-2">
+          <Button
+            variant="outline"
+            onClick={() => setConfirmingReset(true)}
+            className="w-full sm:w-auto"
+          >
             Reset to defaults
           </Button>
-          <Button variant="primary" type="submit">
+          <Button
+            variant="primary"
+            type="submit"
+            className="w-full sm:w-auto"
+          >
             <CheckIcon className="h-4 w-4" />
             Save changes
           </Button>

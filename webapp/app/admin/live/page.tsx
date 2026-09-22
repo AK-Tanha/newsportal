@@ -1,6 +1,5 @@
 import PageHeading from "@/components/admin/PageHeading";
 import LiveManager from "@/components/admin/live/LiveManager";
-import { getDefaultCmsLiveStream } from "@/lib/admin-live";
 
 export default function AdminLivePage() {
   return (
@@ -10,7 +9,7 @@ export default function AdminLivePage() {
         subtitle="Manage the current live stream configuration"
         breadcrumb={["Admin", "Live News"]}
       />
-      <LiveManager seed={getDefaultCmsLiveStream()} />
+      <LiveManager />
     </div>
   );
 }

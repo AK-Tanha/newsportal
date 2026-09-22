@@ -82,7 +82,7 @@ export default function MediaManager({ seeds }: { seeds: CmsMedia[] }) {
       )}
 
       <Card>
-        <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
+        <div className="flex flex-col gap-3 md:flex-row md:items-center">
           <SearchInput
             value={query}
             onChange={(e) => {
@@ -90,9 +90,9 @@ export default function MediaManager({ seeds }: { seeds: CmsMedia[] }) {
               setPage(1);
             }}
             placeholder="Search filename or alt text…"
-            className="w-full lg:max-w-xs lg:flex-1"
+            className="w-full md:max-w-xs md:flex-1"
           />
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center">
             <Select
               value={type}
               onChange={(e) => {
@@ -100,18 +100,27 @@ export default function MediaManager({ seeds }: { seeds: CmsMedia[] }) {
                 setPage(1);
               }}
               aria-label="Filter by media type"
-              className="w-auto"
+              className="w-full sm:w-auto"
             >
               <option value="all">All types</option>
               <option value="image">Images</option>
               <option value="video">Videos</option>
             </Select>
             {hasActiveFilters && (
-              <Button variant="outline" size="md" onClick={resetFilters}>
+              <Button
+                variant="outline"
+                size="md"
+                onClick={resetFilters}
+                className="w-full sm:w-auto"
+              >
                 Clear filters
               </Button>
             )}
-            <Button variant="primary" onClick={() => setUploading(true)}>
+            <Button
+              variant="primary"
+              onClick={() => setUploading(true)}
+              className="w-full sm:w-auto"
+            >
               <PlusIcon className="h-4 w-4" />
               Upload Media
             </Button>

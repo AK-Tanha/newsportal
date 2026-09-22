@@ -1,0 +1,14 @@
+local_masked=
+live_masked_host=
+=== local reachability ===
+Connection to localhost port 5432 [tcp/postgresql] succeeded!
+local_OPEN
+=== local: is PG running + our db default ===
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+=== local tables ===
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+=== live reachability ===
+nc: port range not valid
+live_port_CLOSED
+=== ??? psql default try (we do NOT use live yet, just show shape) ===
+violated: need valid DATABASE_URL

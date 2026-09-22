@@ -45,14 +45,14 @@ export default function Sidebar({
     <>
       {open && (
         <div
-          className="fixed inset-0 z-30 bg-black/50 md:hidden"
+          className="fixed inset-0 z-30 bg-ink-900/60 backdrop-blur-sm md:hidden"
           onClick={onClose}
           aria-hidden
         />
       )}
 
       <aside
-        className={`fixed inset-y-0 left-0 z-40 flex w-64 transform flex-col bg-ink-900 transition-transform duration-200 md:translate-x-0 ${
+        className={`fixed inset-y-0 left-0 z-40 flex w-64 transform flex-col bg-ink-900 shadow-2xl transition-transform duration-300 ease-out md:translate-x-0 md:shadow-none md:rounded-none rounded-r-2xl ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
         aria-label={adminAppInfo.panelLabel}

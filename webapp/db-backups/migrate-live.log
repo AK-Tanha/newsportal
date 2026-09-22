@@ -1,0 +1,50 @@
+===== step 0: pre-condition (read-only) =====
+admin|newsportal_db
+0
+===== step 1: run migrations =====
+
+> frontend@0.1.0 db:migrate
+> tsx scripts/db/migrate.ts
+
+[4m0 migrations are already loaded in the database.[24m
+[4m2 migrations were found in the source code.[24m
+[4m2 migrations are new migrations must be executed.[24m
+[4mMigration InitialSchema20260919000000 has been executed successfully.[24m
+[4mMigration AddAuthSessions20260921000000 has been executed successfully.[24m
+applied: InitialSchema20260919000000
+applied: AddAuthSessions20260921000000
+ok
+migrate_rc=0
+===== step 2: migrations table (read-only) =====
+1|InitialSchema20260919000000
+2|AddAuthSessions20260921000000
+===== step 3: tables (read-only) =====
+advertisement_placements
+advertisements
+article_contents
+article_tags
+articles
+categories
+live_streams
+media
+migrations
+sessions
+site_settings
+tags
+typeorm_metadata
+users
+videos
+===== step 4: counts after migration (expect 0s) =====
+users=0
+categories=0
+tags=0
+media=0
+articles=0
+article_contents=0
+article_tags=0
+videos=0
+live_streams=0
+advertisements=0
+advertisement_placements=0
+site_settings=0
+sessions=0

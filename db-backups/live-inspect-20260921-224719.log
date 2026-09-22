@@ -1,0 +1,17 @@
+LIVE_INSPECT 20260921-224719 (read-only)
+live_shape=postgresql://admin:REDACTED@62.169.18.134:5432/newsportal_db
+=== version ===
+PostgreSQL 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, 64-bit
+psql_exit=0
+=== live tables (public) ===
+=== migration table rows ===
+ERROR:  relation "migrations" does not exist
+LINE 1: SELECT id, name, "timestamp" FROM migrations ORDER BY id;
+                                          ^
+=== row counts ===
+ERROR:  relation "users" does not exist
+LINE 2:    SELECT 'users='||count(*) FROM users UNION ALL
+                                          ^
+=== ACCESS CHECK: can we WRITE? (probe INSERT into migrations is destructive — we DON'T. Report privileges instead) ===
+admin|newsportal_db
+admin|f|f|t

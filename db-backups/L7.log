@@ -1,0 +1,13 @@
+live_host=
+live_port=
+---- nc probe ----
+Connection to  port 5432 [tcp/postgresql] succeeded!
+nc_rc=0
+---- psql connect (read-only; no PASSWORD echoed) ----
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+---- live public tables ----
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+---- live migrations table ----
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+---- live counts ----
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist

@@ -1,0 +1,21 @@
+== LIVE config shape (host/port only) ==
+live_host_port=:
+
+== 1) TCP ===
+nc: port range not valid
+nc_exit=1
+
+== 2) version ==
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+
+== 3) identity ==
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+
+== 4) migrations ==
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+
+== 5) all public tables ==
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
+
+== 6) row counts ==
+psql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "rayhanhossin" does not exist
