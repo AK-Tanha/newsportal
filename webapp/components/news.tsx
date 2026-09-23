@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { lang } from "next/root-params";
+import { defaultLocale } from "@/lib/locales";
 import type { Article } from "@/lib/news";
 import { getCategory } from "@/lib/news";
 import { getDictionary } from "@/lib/i18n";
@@ -61,7 +61,7 @@ export async function SectionHeading({
 }
 
 export async function HeroStory({ article }: { article: Article }) {
-  const locale = await lang();
+  const locale = defaultLocale;
   return (
     <Link
       href={`/${locale}/news/${article.slug}`}
@@ -96,7 +96,7 @@ export async function HeroStory({ article }: { article: Article }) {
 }
 
 export async function SideStory({ article }: { article: Article }) {
-  const locale = await lang();
+  const locale = defaultLocale;
   return (
     <Link
       href={`/${locale}/news/${article.slug}`}
@@ -125,7 +125,7 @@ export async function SideStory({ article }: { article: Article }) {
 }
 
 export async function VerticalCard({ article }: { article: Article }) {
-  const locale = await lang();
+  const locale = defaultLocale;
   return (
     <Link
       href={`/${locale}/news/${article.slug}`}
@@ -156,7 +156,7 @@ export async function VerticalCard({ article }: { article: Article }) {
 }
 
 export async function InlineStory({ article }: { article: Article }) {
-  const locale = await lang();
+  const locale = defaultLocale;
   return (
     <Link
       href={`/${locale}/news/${article.slug}`}
@@ -193,7 +193,7 @@ export async function RankedStory({
   article: Article;
   rank: number;
 }) {
-  const locale = await lang();
+  const locale = defaultLocale;
   const dict = await getDictionary();
   return (
     <Link

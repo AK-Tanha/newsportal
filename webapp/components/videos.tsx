@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { lang } from "next/root-params";
+import { defaultLocale } from "@/lib/locales";
 import type { Video } from "@/lib/videos";
 import { getCategory } from "@/lib/news";
 import { getDictionary } from "@/lib/i18n";
@@ -31,7 +31,7 @@ function PlayIcon({
 }
 
 export async function VideoCard({ video }: { video: Video }) {
-  const locale = await lang();
+  const locale = defaultLocale;
   const dict = await getDictionary();
   return (
     <Link
@@ -73,7 +73,7 @@ export async function VideoCard({ video }: { video: Video }) {
 }
 
 export async function SideVideo({ video }: { video: Video }) {
-  const locale = await lang();
+  const locale = defaultLocale;
   return (
     <Link
       href={`/${locale}/videos/${video.slug}`}
